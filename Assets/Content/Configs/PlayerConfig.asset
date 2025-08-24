@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   <MoveData>k__BackingField:
-    <Speed>k__BackingField: 5
-    <Gravity>k__BackingField: 9.81
+    <MoveSpeed>k__BackingField: 5
+    <RotateSpeed>k__BackingField: 10

@@ -1,6 +1,4 @@
-using Game.Services;
 using GameCore.LifetimeScopes;
-using VContainer;
 
 namespace Game.LifetimeScopes
 {

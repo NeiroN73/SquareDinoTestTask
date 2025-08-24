@@ -13,6 +13,7 @@ namespace Game.Configs
     [Serializable]
     public class MoveData
     {
-        [field: SerializeField] public float Speed { get; private set; }
+        [field: SerializeField] public float MoveSpeed { get; private set; }
+        [field: SerializeField] public float RotateSpeed { get; private set; }
     }
 }

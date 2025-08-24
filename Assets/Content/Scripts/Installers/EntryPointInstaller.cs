@@ -10,7 +10,7 @@ namespace Game.Installers
         
         private async void Awake()
         {
-            await _scenesService.LoadSceneAsync(SceneNames.MainMenu);
+            await _scenesService.LoadSceneAsync(SceneConsts.MainMenu);
         }
     }
 }

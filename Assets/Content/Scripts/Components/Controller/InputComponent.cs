@@ -40,7 +40,7 @@ namespace Game.Components
             if (!isLocalPlayer) 
                 return;
             
-            _debugPerformed.OnNext();
+            _spawnPerformed.OnNext();
         }
 
         private void DebugOnPerformed(InputAction.CallbackContext obj)
@@ -48,7 +48,7 @@ namespace Game.Components
             if (!isLocalPlayer) 
                 return;
             
-            _spawnPerformed.OnNext();
+            _debugPerformed.OnNext();
         }
     }
 }

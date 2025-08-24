@@ -1,87 +1,66 @@
-using System;
 using Game.Components;
 using Game.Configs;
-using Game.UI.PlayerName;
 using GameCore.Factories;
 using GameCore.Services;
 using Mirror;
 using UnityEngine;
-using UnityEngine.Serialization;
 using VContainer;
-using Random = UnityEngine.Random;
 
 namespace Game.Handlers
 {
-    public class PlayerHandler : NetworkHandler, ITickable
+    public class PlayerHandler : NetworkHandler
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private CharacterController _characterController;
-        
-        [Inject] private PlayerConfig _playerConfig;
-        [Inject] private IObjectResolver _objectResolver;
-        [Inject] private TickService _tickService;
-        [Inject] private ViewsFactory _viewsFactory;
-        [Inject] private HandlersFactory _handlersFactory;
-        
-        private Camera _playerCamera;
-
         [SerializeField] private ControllerComponent _controllerComponent;
         [SerializeField] private MoveComponent _moveComponent;
         [SerializeField] private SpawnComponent _spawnComponent;
         [SerializeField] private SendDebugComponent _sendDebugComponent;
-        [SerializeField] private PlayerNameComponent _playerNameComponent;
-
-        [SerializeField] private PlayerNameView _playerNameView;
-
-        public override void OnStartClient()
+        [SerializeField] private ChangeNameComponent _changeNameComponent;
+        
+        [Inject] private PlayerConfig _playerConfig;
+        [Inject] private TickService _tickService;
+        [Inject] private ViewsFactory _viewsFactory;
+        [Inject] private HandlersFactory _handlersFactory;
+        
+        [TargetRpc]
+        public void TargetRpcInitialize(NetworkConnection conn)
         {
-            base.OnStartClient();
-            
-            if (!isServer)
+            Components = new()
             {
-                //CmdSpawn();
-                //CmdSetUsername("");
-            }
-        }
-        
-        [Command]
-        public void CmdSpawn()
-        {
-            var player = _handlersFactory.Create<PlayerHandler>();
-            _handlersFactory.InitializeHandler(player);
-            player.Initialize();
-            
-            NetworkServer.Spawn(player.gameObject, connectionToClient);
-        }
-        
-        public void Initialize()
-        {
-            Components.Add(_controllerComponent);
-            Components.Add(_moveComponent);
-            Components.Add(_spawnComponent);
-            Components.Add(_sendDebugComponent);
-            Components.Add(_playerNameComponent);
+                _controllerComponent,
+                _moveComponent,
+                _spawnComponent,
+                _changeNameComponent,
+                _sendDebugComponent
+            };
             
             foreach (var component in Components)
             {
-                _objectResolver.Inject(component);
                 component.Initialize(this);
             }
             
             _controllerComponent.Init();
-            _moveComponent.Init(_characterController, _controllerComponent, _playerConfig.MoveData);
+            _moveComponent.Init(_characterController, _controllerComponent, _playerConfig.MoveData, _animator);
             _spawnComponent.Init(_controllerComponent);
-            _sendDebugComponent.Init(_controllerComponent, _playerNameComponent);
-            _playerNameComponent.Init(_playerNameView);
+            _sendDebugComponent.Init(_controllerComponent, _changeNameComponent);
             
-            _tickService.RegisterTick(this);
+            _tickService.RegisterTick(_moveComponent);
         }
 
-        public void Tick(float deltaTime)
+        [ClientRpc]
+        public void RpcSetName(string newName)
         {
+            _changeNameComponent.Init(newName);
+        }
+
+        public override void OnStopClient()
+        {
+            base.OnStopClient();
+            
             foreach (var component in Components)
             {
-                component.Tick(Time.deltaTime);
+                component?.Dispose();
             }
         }
     }

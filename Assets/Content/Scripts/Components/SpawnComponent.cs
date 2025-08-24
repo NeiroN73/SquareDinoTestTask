@@ -14,9 +14,9 @@ namespace Game.Components
         {
             controllerComponent.SpawnPerformed.Subscribe(CmdSpawnCube).AddTo(Disposable);
         }
-        
+
         [Command]
-        public void CmdSpawnCube()
+        private void CmdSpawnCube()
         {
             var spawnPosition = transform.position + transform.forward * 2f;
             var cube = _handlersFactory.Create<CubeHandler>(spawnPosition);

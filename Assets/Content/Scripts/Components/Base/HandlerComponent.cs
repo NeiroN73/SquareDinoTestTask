@@ -1,19 +1,17 @@
-using System.Collections.Generic;
-using Game.Components;
+using System;
+using Game.Handlers;
 using Game.NetworkManagers;
-using GameCore.Handlers;
 using Mirror;
-using UnityEngine;
+using R3;
 using VContainer;
 
-namespace Game.Handlers
+namespace Game.Components
 {
-    public abstract class NetworkHandler : NetworkBehaviour, IHandlerable
+    public abstract class HandlerComponent : NetworkBehaviour, IDisposable
     {
-        [field: SerializeField] public string Id { get; private set; }
-        
         protected IObjectResolver ObjectResolver { get; private set; }
-        protected List<HandlerComponent> Components = new();
+        protected NetworkHandler Handler;
+        protected CompositeDisposable Disposable = new();
         
         public override void OnStartClient()
         {
@@ -24,6 +22,16 @@ namespace Game.Handlers
                 ObjectResolver = manager.ObjectResolver;
                 ObjectResolver.Inject(this);
             }
+        }
+        
+        public void Initialize(NetworkHandler handler)
+        {
+            Handler = handler;
+        }
+
+        public void Dispose()
+        {
+            Disposable.Dispose();
         }
     }
 }

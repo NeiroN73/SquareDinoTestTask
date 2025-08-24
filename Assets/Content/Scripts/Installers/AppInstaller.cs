@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Installers
 {
-    public class AppInstaller : GameCoreController
+    public class AppInstaller : CoreController
     {
         [SerializeField] private AppLifetimeScope _appLifetimeScope;
 

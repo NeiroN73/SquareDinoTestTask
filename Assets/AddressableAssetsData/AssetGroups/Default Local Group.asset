@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Address: Assets/Submodules/GameCore/Configs
     m_ReadOnly: 0
     m_SerializedLabels:
-    - gameCoreConfigs
+    - coreConfigs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a57a7343f15dda84d8ad6978748d2681
     m_Address: Assets/Content/Prefabs/Screens

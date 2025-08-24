@@ -1,12 +1,9 @@
-using Content.Scripts.NetworkManager;
-using Game.Handlers;
+using Game.NetworkManagers;
 using Game.Services;
 using GameCore.Factories;
 using GameCore.Services;
 using GameCore.UI;
-using GameCore.UI.Loading;
 using GameCore.Utils;
-using Mirror;
 using R3;
 using VContainer;
 
@@ -17,6 +14,7 @@ namespace Game.UI.MainMenu
         [Inject] private ScreensService _screensService;
         [Inject] private ScenesService _scenesService;
         [Inject] private HandlersFactory _handlersFactory;
+        [Inject] private GameNetworkManager _gameNetworkManager;
         [Inject] private NetworkService _networkService;
         
         private readonly RefTypeViewModelBinder<ReactiveCommand<string>> _playerNameInputField = new("playerName");
@@ -34,42 +32,25 @@ namespace Game.UI.MainMenu
             _joinButton.Value.Subscribe(OnJoinClicked).AddTo(Disposable);
         }
 
-        private void OnPlayerNameChanged(string code)
+        private void OnPlayerNameChanged(string playerName)
         {
-            _playerName = code;
+            _playerName = playerName;
         }
         
         private async void OnHostClicked()
         {
-            _screensService.OpenLoading<LoadingScreen>();
-            
-            if (!NetworkManager.singleton.isNetworkActive)
-            {
-                _screensService.Close();
-                await _scenesService.LoadSceneAsync(SceneNames.Gameplay);
-                NetworkManager.singleton.StartHost();
-            }
-            
-            _screensService.CloseLoading();
+            await _networkService.HostGameAsync(OnSuccess);
         }
         
         private async void OnJoinClicked()
         {
-            _screensService.OpenLoading<LoadingScreen>();
-            
-            if (!NetworkManager.singleton.isNetworkActive)
-            {
-                _screensService.Close();
-                await _scenesService.LoadSceneAsync(SceneNames.Gameplay);
-                NetworkManager.singleton.StartClient();
-                // var d = NetworkManager.singleton.GetComponent<GameNetworkManager>();
-                // var e = d.NetworkConnectionToClient;
-                //         var l = e.identity;
-                //     var w = l.GetComponent<PlayerHandler>();
-                //             w.CmdSpawn();
-            }
-            
-            _screensService.CloseLoading();
+            await _networkService.JoinGameAsync(OnSuccess);
+        }
+
+        private void OnSuccess()
+        {
+            _screensService.Close();
+            _gameNetworkManager.RequestPlayerSpawn(_playerName);
         }
     }
 }
