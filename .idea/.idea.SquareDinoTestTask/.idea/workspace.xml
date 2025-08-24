@@ -4,64 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1865e1fc-0156-4411-8fdf-660cc23b035b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Base.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Base/HandlerComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/ChangeNameComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/MoveComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/SendDebugComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SquareDinoTestTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SquareDinoTestTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Animations/Fast Run.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Animations/Fast Run.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Animations/Fast Run.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Animations/Fast Run.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Animations/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Animations/Idle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Animations/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Animations/PlayerAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Configs/PlayerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Configs/PlayerConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/SpawnerHandler.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Handlers/SpawnerHandler.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scenes/EntryPoint.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scenes/EntryPoint.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Configs/PlayerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Configs/PlayerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/Base/NetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/Base/NetworkHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/PlayerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/PlayerHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/SpawnerHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Handlers/SpawnerHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/AppController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/AppController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/AppInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/AppInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/EntryPointInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/EntryPointInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/GameplayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Installers/GameplayInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/AppLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/AppLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/EntryPointLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/EntryPointLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/GameplayLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/LifetimeScopes/GameplayLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/HandlerComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/HandlerComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Base/HandlerComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/IControllerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Controller/IControllerComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/IControllerComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Controller/IControllerComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/InputComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Controller/InputComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/InputComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/Controller/InputComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/MoveComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/MoveComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/MoveComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/PlayerNameComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/PlayerNameComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/ChangeNameComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/SendDebugComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/SendDebugComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/SendDebugComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/SpawnComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Modules/SpawnComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Components/SpawnComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/NetworkManager/GameNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/NetworkManager/GameNetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/Services/NetworkService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/Services/NetworkService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/UI/MainMenu/MainMenuViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Scripts/UI/MainMenu/MainMenuViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/UI/PlayerName.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/UI/PlayerName/PlayerNameView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Scripts/UI/PlayerName/PlayerNameView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Submodules/GameCore" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Submodules/GameCore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-    </list>
+    <list default="true" id="1865e1fc-0156-4411-8fdf-660cc23b035b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +151,7 @@
       <workItem from="1755846717588" duration="23514000" />
       <workItem from="1755925066789" duration="15660000" />
       <workItem from="1755954803568" duration="39630000" />
-      <workItem from="1756010611521" duration="41908000" />
+      <workItem from="1756010611521" duration="42239000" />
     </task>
     <servers />
   </component>
