@@ -1,5 +1,4 @@
-using Cysharp.Threading.Tasks;
-using Game.UI;
+using Game.UI.MainMenu;
 using GameCore.Services;
 using UnityEngine;
 using VContainer;
@@ -10,9 +9,9 @@ namespace Game.Installers
     {
         [Inject] private ScreensService _screensService;
         
-        private void Awake()
+        private async void Awake()
         {
-            _screensService.OpenAsync<MainMenuScreen>().Forget();
+            await _screensService.OpenAsync<MainMenuScreen>();
         }
     }
 }

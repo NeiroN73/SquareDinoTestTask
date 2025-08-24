@@ -1,16 +1,17 @@
 using GameCore.UI;
 using UnityEngine;
 
-namespace Game.UI
+namespace Game.UI.MainMenu
 {
     public class MainMenuScreen : Screen<MainMenuViewModel>
     {
         [SerializeField] private InputFieldTextChangedViewBinder _playerName = new("playerName");
+        [SerializeField] private ButtonViewBinder _hostButton = new("hostButton");
         [SerializeField] private ButtonViewBinder _joinButton = new("joinButton");
         
         public override void Initialize()
         {
-            Bind(_playerName, _joinButton);
+            Bind(_playerName, _hostButton, _joinButton);
         }
     }
 }

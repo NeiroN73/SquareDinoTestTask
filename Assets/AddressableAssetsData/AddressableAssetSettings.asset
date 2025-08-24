@@ -88,6 +88,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - gameCoreConfigs
+    - gameConfigs
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 7ebcbd13cb3515a478df98524803af1a, type: 2}

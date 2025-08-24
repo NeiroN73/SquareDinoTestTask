@@ -33,15 +33,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a8addac90e02fa3458934802b69c9f36
-    m_Address: Assets/Content/Scenes
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 163641030eebf6145a3a38efeb61232b
     m_Address: Assets/Content/Prefabs/Handlers
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dce8348fdd672674699b61d7f72691b6
+    m_Address: Assets/Content/Configs
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - gameConfigs
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 93816c0fad586254b878a71126dd00b7, type: 2}

@@ -1,12 +1,18 @@
+using Content.Scripts.Installers;
+using Game.LifetimeScopes;
 using UnityEngine;
 
 namespace Game.Installers
 {
-    public class AppInstaller : MonoBehaviour
+    public class AppInstaller : GameCoreController
     {
-        private void Awake()
+        [SerializeField] private AppLifetimeScope _appLifetimeScope;
+
+        protected override void Awake()
         {
-            DontDestroyOnLoad(this);
+            _appLifetimeScope.Build();
+            
+            base.Awake();
         }
     }
 }
